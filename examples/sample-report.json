@@ -1,0 +1,125 @@
+{
+  "tool": "shotxray",
+  "version": "0.1.0",
+  "info": {
+    "path": "examples/sample-video.mp4",
+    "duration": 6.0,
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "subtitle_codec": null,
+    "bitrate": 82205,
+    "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+    "has_audio": true,
+    "has_subtitles": false,
+    "has_video": true,
+    "creation_time": null,
+    "aspect": "16:9 widescreen",
+    "resolution_label": "720p",
+    "chapters": []
+  },
+  "shots": [
+    {
+      "index": 1,
+      "start": 0.0,
+      "end": 2.0,
+      "duration": 2.0,
+      "dominant_color": "#ffff00",
+      "brightness": 245,
+      "thumbnail": "thumbs/shot-01.png"
+    },
+    {
+      "index": 2,
+      "start": 2.0,
+      "end": 4.0,
+      "duration": 2.0,
+      "dominant_color": "#0100ff",
+      "brightness": 15,
+      "thumbnail": "thumbs/shot-02.png"
+    },
+    {
+      "index": 3,
+      "start": 4.0,
+      "end": 6.0,
+      "duration": 2.0,
+      "dominant_color": "#fe0000",
+      "brightness": 70,
+      "thumbnail": "thumbs/shot-03.png"
+    }
+  ],
+  "pacing": {
+    "shot_count": 3,
+    "avg_shot_length": 2.0,
+    "cuts_per_minute": 20.0,
+    "shortest_shot": 2.0,
+    "longest_shot": 2.0,
+    "label": "medium"
+  },
+  "audio": {
+    "has_audio": true,
+    "mean_volume_db": -4.4,
+    "max_volume_db": 0.0,
+    "silences": [
+      {
+        "start": 2.002,
+        "end": 3.0,
+        "duration": 1.0
+      }
+    ],
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.002,
+        "duration": 2.0
+      },
+      {
+        "start": 3.0,
+        "end": 6.0,
+        "duration": 3.0
+      }
+    ],
+    "silence_total": 1.0
+  },
+  "captions": {
+    "cue_count": 0,
+    "cues": []
+  },
+  "score": {
+    "total": 85,
+    "grade": "B",
+    "components": [
+      {
+        "name": "Metadata",
+        "earned": 25,
+        "possible": 25,
+        "note": "duration, resolution, fps and codec all readable"
+      },
+      {
+        "name": "Shot detection",
+        "earned": 25,
+        "possible": 25,
+        "note": "3 shot(s) detected with clean boundaries"
+      },
+      {
+        "name": "Per-shot visuals",
+        "earned": 20,
+        "possible": 20,
+        "note": "thumbnail + dominant colour + brightness for every shot"
+      },
+      {
+        "name": "Audio profile",
+        "earned": 15,
+        "possible": 15,
+        "note": "loudness + silence map measured"
+      },
+      {
+        "name": "Captions",
+        "earned": 0,
+        "possible": 15,
+        "note": "no embedded captions in the file (transcription is out of scope)"
+      }
+    ]
+  }
+}

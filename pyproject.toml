@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shotxray"
+version = "0.1.0"
+description = "Reverse-engineer any video, shot by shot — locally. No cloud, no API key, no LLM."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Bidyut Roy" }]
+keywords = ["video", "video-analysis", "shot-detection", "scene-detection", "ffmpeg", "local-first", "cli", "reverse-engineering", "video-editing", "ai-agents", "content-creation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+shotxray = "shotxray.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/BidyutRoy2/shotxray"
+Issues = "https://github.com/BidyutRoy2/shotxray/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
